@@ -1,0 +1,19 @@
+Microsoft Windows [Version 10.0.26200.8973]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R>cd C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE ASSESSMENTS\CO3- AT-1\evcp-booking-service
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE ASSESSMENTS\CO3- AT-1\evcp-booking-service>git merge --no-ff feature/rate-limiting -m "merge: integrate feature/rate-limiting into develop"
+Already up to date.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE ASSESSMENTS\CO3- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE ASSESSMENTS\CO3- AT-1\evcp-booking-service>git status
+On branch feature/rate-limiting
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE ASSESSMENTS\CO3- AT-1\evcp-booking-service>git add src/server.js && git commit -m "merge: resolve conflict between request-logging and rate-limiting"
+On branch feature/rate-limiting
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE ASSESSMENTS\CO3- AT-1\evcp-booking-service>
