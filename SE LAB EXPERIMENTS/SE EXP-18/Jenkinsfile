@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Build') {
+            steps {
+                sh 'docker build -t jenkins-cicd-demo .'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'docker run --rm jenkins-cicd-demo nginx -t'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh '''
+                    docker rm -f jenkins-cicd-demo-deployed || true
+                    docker run -d --name jenkins-cicd-demo-deployed -p 8083:80 jenkins-cicd-demo
+                '''
+            }
+        }
+    }
+}
