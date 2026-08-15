@@ -1,0 +1,440 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git checkout develop
+error: Your local changes to the following files would be overwritten by checkout:
+        package.json
+Please commit your changes or stash them before you switch branches.
+error: The following untracked working tree files would be overwritten by checkout:
+        package-lock.json
+Please move or remove them before you switch branches.
+Aborting
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add eslint.config.js package.json
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'eslint.config.js', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"chore(ci): add ESLint config and lint script for pipeline code-quality stage"
+[main 7bc5156] chore(ci): add ESLint config and lint script for pipeline code-quality stage
+ 2 files changed, 30 insertions(+), 2 deletions(-)
+ create mode 100644 eslint.config.js
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"feat(ci): add GitHub Actions CI/CD pipeline"
+[main 87cb4f3] feat(ci): add GitHub Actions CI/CD pipeline
+ 1 file changed, 141 insertions(+)
+ create mode 100644 .github/workflows/ci-cd.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>npm install
+
+added 94 packages, and audited 216 packages in 8s
+
+44 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add package-lock.json
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"chore: update package-lock for eslint dependency"
+[main da3676d] chore: update package-lock for eslint dependency
+ 1 file changed, 2641 insertions(+)
+ create mode 100644 package-lock.json
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+ ! [rejected]        develop -> develop (fetch first)
+error: failed to push some refs to 'https://github.com/RAKS-rak57/evcp-booking-service-.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git checkout develop
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git pull origin develop   # brings in remote changes
+fatal: couldn't find remote ref #
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop   # now your push will succeed
+error: src refspec # does not match any
+error: src refspec now does not match any
+error: src refspec your does not match any
+error: src refspec push does not match any
+error: src refspec will does not match any
+error: src refspec succeed does not match any
+error: failed to push some refs to 'https://github.com/RAKS-rak57/evcp-booking-service-.git'
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git pull origin develop
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 1 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 249 bytes | 19.00 KiB/s, done.
+From https://github.com/RAKS-rak57/evcp-booking-service-
+ * branch            develop    -> FETCH_HEAD
+   fe2c0a6..5f099bb  develop    -> origin/develop
+Updating fe2c0a6..5f099bb
+Fast-forward
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Everything up-to-date
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit
+On branch develop
+Your branch is up to date with 'origin/develop'.
+
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Everything up-to-date
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"feat: add EVCP project with CI/CD workflow"
+On branch develop
+Your branch is up to date with 'origin/develop'.
+
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git remote -v
+origin  https://github.com/RAKS-rak57/evcp-booking-service-.git (fetch)
+origin  https://github.com/RAKS-rak57/evcp-booking-service-.git (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git checkout develop
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git checkout develop
+M       package.json
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add eslint.config.js package.json
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'eslint.config.js', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"chore(ci): add ESLint config and lint script for pipeline code-quality stage"
+[develop 5672605] chore(ci): add ESLint config and lint script for pipeline code-quality stage
+ 2 files changed, 30 insertions(+), 2 deletions(-)
+ create mode 100644 eslint.config.js
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"feat(ci): add GitHub Actions CI/CD pipeline"
+[develop bd5abfd] feat(ci): add GitHub Actions CI/CD pipeline
+ 1 file changed, 141 insertions(+)
+ create mode 100644 .github/workflows/ci-cd.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>npm install
+
+changed 2 packages, and audited 216 packages in 5s
+
+44 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add package-lock.json
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"chore: update package-lock for eslint dependency"
+[develop e9ad24a] chore: update package-lock for eslint dependency
+ 1 file changed, 1179 insertions(+), 5 deletions(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 12.54 KiB | 1.04 MiB/s, done.
+Total 12 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   5f099bb..e9ad24a  develop -> develop
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): correct Trivy action reference"
+On branch develop
+Your branch is up to date with 'origin/develop'.
+
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Everything up-to-date
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): bump Trivy action version"
+[develop d119cce] fix(ci): bump Trivy action version
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 410 bytes | 205.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   e9ad24a..d119cce  develop -> develop
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): use Trivy action 0.24.0"
+[develop 929fdc0] fix(ci): use Trivy action 0.24.0
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 405 bytes | 135.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   d119cce..929fdc0  develop -> develop
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): use valid Trivy action release tag"
+[develop 8e74d82] fix(ci): use valid Trivy action release tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 422 bytes | 140.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   929fdc0..8e74d82  develop -> develop
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): force lowercase for Docker image tags"
+[develop c151dba] fix(ci): force lowercase for Docker image tags
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 427 bytes | 213.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   8e74d82..c151dba  develop -> develop
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): force lowercase for Docker image tags"
+[develop a24e434] fix(ci): force lowercase for Docker image tags
+ 1 file changed, 1 insertion(+)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 427 bytes | 142.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   c151dba..a24e434  develop -> develop
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): use lower() for Docker image tags"
+[develop 9db854b] fix(ci): use lower() for Docker image tags
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 456 bytes | 228.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   a24e434..9db854b  develop -> develop
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): force lowercase repo owner in Docker image tag"
+[develop 0fc8893] fix(ci): force lowercase repo owner in Docker image tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin develop
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 433 bytes | 216.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   9db854b..0fc8893  develop -> develop
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git checkout develop
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git pull origin develop
+From https://github.com/RAKS-rak57/evcp-booking-service-
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git pull origin main
+From https://github.com/RAKS-rak57/evcp-booking-service-
+ * branch            main       -> FETCH_HEAD
+   96f6f5e..5f099bb  main       -> origin/main
+Auto-merging package-lock.json
+CONFLICT (add/add): Merge conflict in package-lock.json
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git merge --no-ff develop -m "release: merge CI/CD pipeline into main"
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 3 and 5 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      package-lock.json
+        both modified:   package.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>rm package-lock.json
+'rm' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>npm install --package-lock-only
+
+up to date, audited 216 packages in 3s
+
+44 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>npm ci
+
+added 215 packages, and audited 216 packages in 9s
+
+44 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add package.json package-lock.json
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"resolve: merge develop into main, clean lock file"
+[main c076102] resolve: merge develop into main, clean lock file
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin main
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (16/16), 13.10 KiB | 1.09 MiB/s, done.
+Total 16 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), completed with 3 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   5f099bb..c076102  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): use valid Trivy action release tag"
+[main 8892484] fix(ci): use valid Trivy action release tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 412 bytes | 137.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   c076102..8892484  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): use valid Trivy action release tag"
+[main b1bb727] fix(ci): use valid Trivy action release tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 418 bytes | 104.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   8892484..b1bb727  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git add .github/workflows/ci-cd.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git commit -m"fix(ci): force lowercase repo owner in Docker image tag"
+[main a20e907] fix(ci): force lowercase repo owner in Docker image tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 425 bytes | 141.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/evcp-booking-service-.git
+   b1bb727..a20e907  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO3- AT-2\evcp-booking-service>

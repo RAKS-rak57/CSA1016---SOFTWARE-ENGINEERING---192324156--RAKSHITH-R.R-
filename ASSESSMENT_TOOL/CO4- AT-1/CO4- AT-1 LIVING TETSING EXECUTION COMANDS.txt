@@ -1,0 +1,355 @@
+Microsoft Windows [Version 10.0.26200.8973]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s "http://localhost:3000/api/stations?lat=13.08&lng=80.21&radius=10"
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED        STATUS                    PORTS                                         NAMES
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   5 days ago     Up 11 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago   Up 11 minutes             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker compose up
+time="2026-08-14T14:43:42+05:30" level=warning msg="C:\\Users\\RAKSHITH.R.R\\Downloads\\SLOT-D SOFTWARE ENGINERING\\ASSESSMENT_TOOL\\CO4- AT-1\\evcp-booking-service\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] up 1/2
+ - Contain... Creating                                                                                              0.2s
+ ✘ Contain... Error response from daemon: Conflict. The container name "/evcp-redis" is already in use by container "8c4357cda090a32ae906be61ae88503e1527f20aef528e9840f17178948aae2f". Youhave to remove (or rename) that container to be able to reuse that name. 0.2s
+Error response from daemon: Conflict. The container name "/evcp-redis" is already in use by container "8c4357cda090a32ae906be61ae88503e1527f20aef528e9840f17178948aae2f". You have to remove (or rename) that container to be able to reuse that name.
+
+What's next:
+    Debug this Compose error with Gordon → docker ai "help me fix this compose error"
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED        STATUS                    PORTS                                         NAMES
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   5 days ago     Up 12 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago   Up 12 minutes             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl http://localhost:3000/health
+curl: (7) Failed to connect to localhost:3000 after 2241 ms: Could not connect to server
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker compose up
+time="2026-08-14T14:47:57+05:30" level=warning msg="C:\\Users\\RAKSHITH.R.R\\Downloads\\SLOT-D SOFTWARE ENGINERING\\ASSESSMENT_TOOL\\CO4- AT-1\\evcp-booking-service\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+service "booking-api" depends on undefined service "redis": invalid compose project
+
+What's next:
+    Debug this Compose error with Gordon → docker ai "help me fix this compose error"
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker compose up
+time="2026-08-14T14:49:58+05:30" level=warning msg="C:\\Users\\RAKSHITH.R.R\\Downloads\\SLOT-D SOFTWARE ENGINERING\\ASSESSMENT_TOOL\\CO4- AT-1\\evcp-booking-service\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] up 1/1
+ ✘ Contain... Error response from daemon: Conflict. The container name "/evcp-postgres" is already in use by container "f7d1ca11f6db3e4a13415151344fc4b97e3acfed9991cd04a7c271b628d15d09". You have to remove (or rename) that container to be able to reuse that name. 0.2s
+Error response from daemon: Conflict. The container name "/evcp-postgres" is already in use by container "f7d1ca11f6db3e4a13415151344fc4b97e3acfed9991cd04a7c271b628d15d09". You have to remove (or rename) that container to be able to reuse that name.
+
+What's next:
+    Debug this Compose error with Gordon → docker ai "help me fix this compose error"
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker build -t evcp/booking-service:1.0.0 .
+[+] Building 6.4s (12/12) FINISHED                                                                 docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 939B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/node:20-alpine                                                  2.5s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/7] FROM docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609  0.1s
+ => => resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609  0.1s
+ => [internal] load build context                                                                                  0.2s
+ => => transferring context: 61.53kB                                                                               0.2s
+ => CACHED [2/7] WORKDIR /usr/src/app                                                                              0.0s
+ => CACHED [3/7] COPY package*.json ./                                                                             0.0s
+ => CACHED [4/7] RUN npm install --omit=dev                                                                        0.0s
+ => CACHED [5/7] COPY src ./src                                                                                    0.0s
+ => CACHED [6/7] COPY .env.example ./.env.example                                                                  0.0s
+ => CACHED [7/7] RUN addgroup -S evcp && adduser -S evcp -G evcp                                                   0.0s
+ => exporting to image                                                                                             3.1s
+ => => exporting layers                                                                                            0.0s
+ => => exporting manifest sha256:fefe8b4b19b053c06e8a09144ca4db3e72dd308cdd90913b019f24e8e192509c                  0.0s
+ => => exporting config sha256:568e9fee0cda0124fd246970c3bbb8d6ea174c820d5d7a09df7f03eabd9bcdf8                    0.0s
+ => => exporting attestation manifest sha256:16b6a76df5cb66fdee8891427fedcbfa7486fac527e9cf9d837178bfbfec2de4      0.1s
+ => => exporting manifest list sha256:0bb2f4525a1c670858a29d7e6dccebf5818ecc62c7d0b384b9c13516e335d9ed             0.0s
+ => => naming to docker.io/evcp/booking-service:1.0.0                                                              0.0s
+ => => unpacking to docker.io/evcp/booking-service:1.0.0                                                           2.8s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/dqlong8xpg63bxl5f4rjfsoox
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker run --name evcp-booking-api \
+
+What's next:
+    Debug this container error with Gordon → docker ai "help me fix this container error"
+docker: invalid reference format
+
+Run 'docker run --help' for more information
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  --restart unless-stopped \
+'--restart' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -p 3000:3000 \
+'-p' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -e PORT=3000 \
+'-e' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -e PGHOST=host.docker.internal \
+'-e' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -e PGPORT=5432 \
+'-e' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -e PGDATABASE=evcp_booking \
+'-e' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -e PGUSER=evcp_user \
+'-e' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -e PGPASSWORD=changeme \
+'-e' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -e REDIS_HOST=host.docker.internal \
+'-e' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -e REDIS_PORT=6379 \
+'-e' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -e BOOKING_HOLD_MINUTES=15 \
+'-e' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  evcp/booking-service:1.0.0
+'evcp' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED        STATUS                    PORTS                                         NAMES
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   5 days ago     Up 21 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago   Up 21 minutes             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker run --name evcp-booking-api -p 3000:3000 -e PORT=3000 -e PGHOST=host.docker.internal -e PGPORT=5432 -e PGDATABASE=evcp_booking -e PGUSER=evcp_user -e PGPASSWORD=changeme -e REDIS_HOST=host.docker.internal -e REDIS_PORT=6379 -e BOOKING_HOLD_MINUTES=15 evcp/booking-service:1.0.0
+
+What's next:
+    Debug this container error with Gordon → docker ai "help me fix this container error"
+docker: Error response from daemon: Conflict. The container name "/evcp-booking-api" is already in use by container "f84b90de061e4bad8607ecf384df4feeca53f5965e07e3de42d5aa34b908fd06". Youhave to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED        STATUS                    PORTS                                         NAMES
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   5 days ago     Up 23 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago   Up 23 minutes             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker ps -a
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED        STATUS                        PORTS                                              NAMES
+beb0e3c964aa   jenkins-cicd-demo                              "/docker-entrypoint.…"   27 hours ago   Exited (255) 24 minutes ago   0.0.0.0:8083->80/tcp                               jenkins-cicd-demo-deployed
+8176437a4714   01315fbe6cb1                                   "/docker-entrypoint.…"   27 hours ago   Exited (255) 24 minutes ago   0.0.0.0:8082->80/tcp                               jenkins-cicd-demo
+b3983bdd0ce7   jenkins/jenkins:lts-jdk21                      "/usr/bin/tini -- /u…"   27 hours ago   Exited (255) 24 minutes ago   0.0.0.0:50000->50000/tcp, 0.0.0.0:8081->8080/tcp   jenkins
+3cbee84fd538   static-website                                 "/docker-entrypoint.…"   29 hours ago   Exited (255) 24 minutes ago   0.0.0.0:8080->80/tcp                               static-website-container
+f84b90de061e   21f880caeddb                                   "docker-entrypoint.s…"   5 days ago     Created                                                                          evcp-booking-api
+f7d1ca11f6db   postgres:16-alpine                             "docker-entrypoint.s…"   5 days ago     Created                                                                          evcp-postgres
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   5 days ago     Up 24 minutes (healthy)       0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp        evcp-redis
+67cfc4407db8   python                                         "python3"                2 weeks ago    Exited (255) 5 days ago                                                          awesome_cartwright
+1f17caae44cf   ubuntu                                         "/bin/bash"              2 weeks ago    Exited (0) 2 weeks ago                                                           dazzling_bassi
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago   Up 24 minutes                 0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp        face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker ps -a
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED        STATUS                        PORTS                                              NAMES
+beb0e3c964aa   jenkins-cicd-demo                              "/docker-entrypoint.…"   27 hours ago   Exited (255) 28 minutes ago   0.0.0.0:8083->80/tcp                               jenkins-cicd-demo-deployed
+8176437a4714   01315fbe6cb1                                   "/docker-entrypoint.…"   27 hours ago   Exited (255) 28 minutes ago   0.0.0.0:8082->80/tcp                               jenkins-cicd-demo
+b3983bdd0ce7   jenkins/jenkins:lts-jdk21                      "/usr/bin/tini -- /u…"   27 hours ago   Exited (255) 28 minutes ago   0.0.0.0:50000->50000/tcp, 0.0.0.0:8081->8080/tcp   jenkins
+3cbee84fd538   static-website                                 "/docker-entrypoint.…"   29 hours ago   Exited (255) 28 minutes ago   0.0.0.0:8080->80/tcp                               static-website-container
+f84b90de061e   21f880caeddb                                   "docker-entrypoint.s…"   5 days ago     Created                                                                          evcp-booking-api
+f7d1ca11f6db   postgres:16-alpine                             "docker-entrypoint.s…"   5 days ago     Created                                                                          evcp-postgres
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   5 days ago     Up 28 minutes (healthy)       0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp        evcp-redis
+67cfc4407db8   python                                         "python3"                2 weeks ago    Exited (255) 5 days ago                                                          awesome_cartwright
+1f17caae44cf   ubuntu                                         "/bin/bash"              2 weeks ago    Exited (0) 2 weeks ago                                                           dazzling_bassi
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago   Up 28 minutes                 0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp        face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker start evcp-postgres
+evcp-postgres
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker start evcp-booking-api
+evcp-booking-api
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED        STATUS                            PORTS                                         NAMES
+f84b90de061e   21f880caeddb                                   "docker-entrypoint.s…"   5 days ago     Up 7 seconds (healthy)            0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   evcp-booking-api
+f7d1ca11f6db   postgres:16-alpine                             "docker-entrypoint.s…"   5 days ago     Up 8 seconds (health: starting)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp   evcp-postgres
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   5 days ago     Up 29 minutes (healthy)           0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago   Up 29 minutes                     0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl http://localhost:3000/health
+{"status":"ok","service":"evcp-booking-service","timestamp":"2026-08-14T09:31:15.018Z"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s "http://localhost:3000/api/stations?lat=13.08&lng=80.21&radius=10"
+{"error":true,"message":"relation \"stations\" does not exist"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s "http://localhost:3000/api/stations?lat=abc&lng=80.21&radius=10"
+{"error":true,"message":"relation \"stations\" does not exist"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s "http://localhost:3000/api/stations?lat=13.08&lng=80.21&radius=-5"
+{"error":true,"message":"relation \"stations\" does not exist"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service># 1st run: should return availability with "source":"db"
+'#' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"error":true,"message":"relation \"connectors\" does not exist"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service># 2nd run: same command again, should now return "source":"cache"
+'#' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"error":true,"message":"relation \"connectors\" does not exist"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"error":true,"message":"relation \"connectors\" does not exist"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"error":true,"message":"relation \"connectors\" does not exist"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"error":true,"message":"relation \"connectors\" does not exist"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker cp db/init.sql evcp-postgres:/init.sql
+Successfully copied 1.13kB (transferred 3.07kB) to evcp-postgres:/init.sql
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker exec -it evcp-postgres psql -U evcp_user -d evcp_booking -f /init.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 2
+INSERT 0 3
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug evcp-postgres
+    Learn more at https://docs.docker.com/go/debug-cli/
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>docker exec -it evcp-postgres psql -U evcp_user -d evcp_booking -c "\dt"
+            List of relations
+ Schema |    Name    | Type  |   Owner
+--------+------------+-------+-----------
+ public | bookings   | table | evcp_user
+ public | connectors | table | evcp_user
+ public | stations   | table | evcp_user
+(3 rows)
+
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug evcp-postgres
+    Learn more at https://docs.docker.com/go/debug-cli/
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"stationId":"1","source":"db","totalConnectors":2,"available":2}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"stationId":"1","source":"cache","totalConnectors":2,"available":2}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s -X POST http://localhost:3000/api/bookings \
+{"error":true,"message":"userId, stationId and connectorId are required"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>  -H "Content-Type: application/json" \
+'-H' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s -X POST http://localhost:3000/api/bookings -H "Content-Type: application/json" -d "{\"userId\":\"u1\",\"stationId\":1,\"connectorId\":1}"
+{"message":"Slot reserved","booking":{"id":1,"user_id":"u1","station_id":1,"connector_id":1,"status":"RESERVED","start_time":"2026-08-14T09:55:40.517Z","hold_expires_at":"2026-08-14T10:10:40.517Z"}}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s -X POST http://localhost:3000/api/bookings -H "Content-Type: application/json" -d "{\"userId\":\"u1\",\"stationId\":1,\"connectorId\":1}"
+{"message":"Slot reserved","booking":{"id":2,"user_id":"u1","station_id":1,"connector_id":1,"status":"RESERVED","start_time":"2026-08-14T09:55:46.577Z","hold_expires_at":"2026-08-14T10:10:46.577Z"}}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/bookings
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /api/bookings</pre>
+</body>
+</html>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/bookings/1
+{"id":1,"user_id":"u1","station_id":1,"connector_id":1,"status":"RESERVED","start_time":"2026-08-14T09:55:40.517Z","hold_expires_at":"2026-08-14T10:10:40.517Z"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/bookings/2
+{"id":2,"user_id":"u1","station_id":1,"connector_id":1,"status":"RESERVED","start_time":"2026-08-14T09:55:46.577Z","hold_expires_at":"2026-08-14T10:10:46.577Z"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"stationId":"1","source":"db","totalConnectors":2,"available":2}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s -X POST http://localhost:3000/api/bookings -H "Content-Type: application/json" -d "{\"userId\":\"u1\",\"stationId\":1,\"connectorId\":1}"
+{"message":"Slot reserved","booking":{"id":3,"user_id":"u1","station_id":1,"connector_id":1,"status":"RESERVED","start_time":"2026-08-14T10:02:51.213Z","hold_expires_at":"2026-08-14T10:17:51.213Z"}}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"stationId":"1","source":"db","totalConnectors":2,"available":2}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl http://localhost:3000/health
+{"status":"ok","service":"evcp-booking-service","timestamp":"2026-08-14T10:07:01.871Z"}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s "http://localhost:3000/api/stations?lat=13.08&lng=80.21&radius=10"
+{"count":1,"stations":[{"id":1,"name":"Anna Nagar Charging Hub","latitude":13.085,"longitude":80.2101,"connector_type":"CCS2","status":"ACTIVE"}]}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s "http://localhost:3000/api/stations?lat=abc&lng=80.21&radius=10"
+{"error":true,"message":"invalid input syntax for type double precision: \"abc\""}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s "http://localhost:3000/api/stations?lat=13.08&lng=80.21&radius=-5"
+{"count":0,"stations":[]}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"stationId":"1","source":"db","totalConnectors":2,"available":2}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"stationId":"1","source":"cache","totalConnectors":2,"available":2}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s -X POST http://localhost:3000/api/bookings -H "Content-Type: application/json" -d "{\"userId\":\"u1\",\"stationId\":1,\"connectorId\":1}"
+{"message":"Slot reserved","booking":{"id":4,"user_id":"u1","station_id":1,"connector_id":1,"status":"RESERVED","start_time":"2026-08-14T10:08:51.365Z","hold_expires_at":"2026-08-14T10:23:51.365Z"}}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s -X POST http://localhost:3000/api/bookings -H "Content-Type: application/json" -d "{\"userId\":\"u1\",\"stationId\":1,\"connectorId\":1}"
+{"message":"Slot reserved","booking":{"id":5,"user_id":"u1","station_id":1,"connector_id":1,"status":"RESERVED","start_time":"2026-08-14T10:09:02.826Z","hold_expires_at":"2026-08-14T10:24:02.826Z"}}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"stationId":"1","source":"db","totalConnectors":2,"available":2}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s -X POST http://localhost:3000/api/bookings -H "Content-Type: application/json" -d "{\"userId\":\"u1\",\"stationId\":1,\"connectorId\":1}"
+{"message":"Slot reserved","booking":{"id":6,"user_id":"u1","station_id":1,"connector_id":1,"status":"RESERVED","start_time":"2026-08-14T10:09:49.192Z","hold_expires_at":"2026-08-14T10:24:49.192Z"}}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>curl -s http://localhost:3000/api/stations/1/availability
+{"stationId":"1","source":"db","totalConnectors":2,"available":2}
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\ASSESSMENT_TOOL\CO4- AT-1\evcp-booking-service>
