@@ -1,0 +1,379 @@
+Microsoft Windows [Version 10.0.26200.8973]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R>CD C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14>git clone https://github.com/RAKS-rak57/Hello-World
+Cloning into 'Hello-World'...
+remote: Enumerating objects: 7, done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 7 (from 1)
+Receiving objects: 100% (7/7), done.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14>cd Hello-World
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git checkout -b add-lab-update
+Switched to a new branch 'add-lab-update'
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git branch
+* add-lab-update
+  master
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git status
+On branch add-lab-update
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git diff
+diff --git a/README b/README
+index 980a0d5..0f5c18e 100644
+--- a/README
++++ b/README
+@@ -1 +1,14 @@
+-Hello World!
++## GitHub Collaboration Workflow
++
++This project demonstrates a collaborative software development workflow using Git and GitHub. The contribution was developed in an isolated feature branch and submitted through aPull Request for review before being merged into the main branch.
++
++### Contribution Summary
++
++- Created a dedicated feature branch for the modification.
++- Updated the project documentation with relevant information.
++- Committed the changes with a descriptive commit message.
++- Pushed the feature branch to GitHub.
++- Submitted the changes through a Pull Request for peer review.
++- Incorporated review feedback before merging the contribution.
++
++This workflow promotes version control, code review, collaboration, and maintainable software development practices.
+\ No newline at end of file
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git add README
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git status
+On branch add-lab-update
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README
+
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git commit -m "Update README for Git collaboration lab"
+[add-lab-update 088ee43] Update README for Git collaboration lab
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git push -u origin add-lab-update
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 644 bytes | 322.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'add-lab-update' on GitHub by visiting:
+remote:      https://github.com/RAKS-rak57/Hello-World/pull/new/add-lab-update
+remote:
+To https://github.com/RAKS-rak57/Hello-World
+ * [new branch]      add-lab-update -> add-lab-update
+branch 'add-lab-update' set up to track 'origin/add-lab-update'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git commit -m "Improve README based on review feedback"
+[add-lab-update 9a1da93] Improve README based on review feedback
+ 1 file changed, 2 insertions(+)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 378 bytes | 378.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RAKS-rak57/Hello-World
+   088ee43..9a1da93  add-lab-update -> add-lab-update
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git branch
+* add-lab-update
+  master
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>git log --oneline --all
+9a1da93 (HEAD -> add-lab-update, origin/add-lab-update) Improve README based on review feedback
+088ee43 Update README for Git collaboration lab
+7fd1a60 (origin/master, origin/HEAD, master) Merge pull request #6 from Spaceghost/patch-1
+7629413 New line at end of file. --Signed off by Spaceghost
+553c207 first commit
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-14\Hello-World>cd C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15>git clone https://github.com/RAKS-rak57/Hello-World
+Cloning into 'Hello-World'...
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 14 (delta 2), reused 5 (delta 1), pack-reused 7 (from 1)
+Receiving objects: 100% (14/14), done.
+Resolving deltas: 100% (2/2), done.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15>cd Hello-World
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git checkout -b feature-conflict-demo
+Switched to a new branch 'feature-conflict-demo'
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git checkout -b feature-conflict-demo
+fatal: a branch named 'feature-conflict-demo' already exists
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git branch
+* feature-conflict-demo
+  master
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World
+
+08/13/2026  09:34 AM    <DIR>          .
+08/13/2026  09:34 AM    <DIR>          ..
+08/13/2026  09:34 AM               882 README
+               1 File(s)            882 bytes
+               2 Dir(s)  11,479,977,984 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>notepad README
+'notepad' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git status
+On branch feature-conflict-demo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git diff
+diff --git a/README b/README
+index 625200d..9b8cb09 100644
+--- a/README
++++ b/README
+@@ -13,4 +13,8 @@ This project demonstrates a collaborative software development workflow using Gi
+
+ The workflow includes forking, branching, committing, pushing, reviewing, and merging changes.
+
+-This workflow promotes version control, code review, collaboration, and maintainable software development practices.
+\ No newline at end of file
++This workflow promotes version control, code review, collaboration, and maintainable software development practices.
++
++## Collaborative Development
++
++This project follows a structured collaborative development workflow using Git and GitHub. Feature changes are developed in dedicated branches, reviewed through pull requests, and integrated into the main project after resolving any merge conflicts.
+\ No newline at end of file
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git add README
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git commit -m "Add collaborative development section"
+[feature-conflict-demo 5cd61ec] Add collaborative development section
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git push -u origin feature-conflict-demo
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 472 bytes | 236.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'feature-conflict-demo' on GitHub by visiting:
+remote:      https://github.com/RAKS-rak57/Hello-World/pull/new/feature-conflict-demo
+remote:
+To https://github.com/RAKS-rak57/Hello-World
+ * [new branch]      feature-conflict-demo -> feature-conflict-demo
+branch 'feature-conflict-demo' set up to track 'origin/feature-conflict-demo'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git status
+On branch feature-conflict-demo
+Your branch is up to date with 'origin/feature-conflict-demo'.
+
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git branch
+  feature-conflict-demo
+* master
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git add README
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git commit -m "Update professional development workflow"
+[master 58308f2] Update professional development workflow
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 453 bytes | 453.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RAKS-rak57/Hello-World
+   1f85441..58308f2  master -> master
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>feature-conflict-demo
+'feature-conflict-demo' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git checkout feature-conflict-demo
+Switched to branch 'feature-conflict-demo'
+Your branch is up to date with 'origin/feature-conflict-demo'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git branch
+* feature-conflict-demo
+  master
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git pull origin master
+From https://github.com/RAKS-rak57/Hello-World
+ * branch            master     -> FETCH_HEAD
+Auto-merging README
+CONFLICT (content): Merge conflict in README
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git status
+On branch feature-conflict-demo
+Your branch is up to date with 'origin/feature-conflict-demo'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git diff
+diff --cc README
+index 9b8cb09,9c18c78..0000000
+--- a/README
++++ b/README
+@@@ -15,6 -15,6 +15,12 @@@ The workflow includes forking, branchin
+
+  This workflow promotes version control, code review, collaboration, and maintainable software development practices.
+
+++<<<<<<< HEAD
+ +## Collaborative Development
+ +
+- This project follows a structured collaborative development workflow using Git and GitHub. Feature changes are developed in dedicated branches, reviewed through pull requests, and integrated into the main project after resolving any merge conflicts.
+++This project follows a structured collaborative development workflow using Git and GitHub. Feature changes are developed in dedicated branches, reviewed through pull requests, and integrated into the main project after resolving any merge conflicts.
+++=======
++ ## Professional Development Workflow
++
+ -This project follows a professional development workflow using Git and GitHub. Changes are developed independently, reviewed collaboratively, and integrated into the main project after successful validation.
+++This project follows a professional development workflow using Git and GitHub. Changes are developed independently, reviewed collaboratively, and integrated into the main project after successful validation.
+++>>>>>>> 58308f28880108ca63feb3db919b24b752ed1f4e
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>notepad README
+'notepad' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>Start-Process notepad README
+'Start-Process' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>notepad.exe README
+'notepad.exe' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>Invoke-Item README
+'Invoke-Item' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>notepad README
+'notepad' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>C:\Windows\System32\notepad.exe README.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git status
+On branch feature-conflict-demo
+Your branch is up to date with 'origin/feature-conflict-demo'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git add README
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git status
+On branch feature-conflict-demo
+Your branch is up to date with 'origin/feature-conflict-demo'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   README
+
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git commit -m "Resolve README merge conflict"
+[feature-conflict-demo caf4bee] Resolve README merge conflict
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git push origin feature-conflict-demo
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 403 bytes | 201.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RAKS-rak57/Hello-World
+   5cd61ec..caf4bee  feature-conflict-demo -> feature-conflict-demo
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>git status
+On branch feature-conflict-demo
+Your branch is up to date with 'origin/feature-conflict-demo'.
+
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\EXP-15\Hello-World>

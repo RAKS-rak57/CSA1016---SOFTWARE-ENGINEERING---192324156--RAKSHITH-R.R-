@@ -1,0 +1,370 @@
+Microsoft Windows [Version 10.0.26200.8973]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R>CD C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17>kubectl version --client
+Client Version: v1.34.1
+Kustomize Version: v5.7.1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17>kubectl get nodes
+E0813 10:40:51.124699   23012 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+E0813 10:40:51.145689   23012 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+E0813 10:40:51.161700   23012 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+E0813 10:40:51.178208   23012 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+E0813 10:40:51.193642   23012 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+Error from server (NotFound): the server could not find the requested resource
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17>kubectl version
+Client Version: v1.34.1
+Kustomize Version: v5.7.1
+Error from server (NotFound): the server could not find the requested resource
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17>kubectl config current-context
+error: current-context is not set
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17>kubectl config get-contexts
+CURRENT   NAME   CLUSTER   AUTHINFO   NAMESPACE
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17>kubectl config current-context
+docker-desktop
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17>kubectl get nodes
+NAME                    STATUS   ROLES           AGE   VERSION
+desktop-control-plane   Ready    control-plane   85s   v1.34.3
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17>mkdir flask-kubernetes-api
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17>cd flask-kubernetes-api
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api
+
+08/13/2026  10:52 AM    <DIR>          .
+08/13/2026  10:50 AM    <DIR>          ..
+08/13/2026  10:51 AM               505 app.py
+08/13/2026  10:52 AM                12 requirements.txt
+               2 File(s)            517 bytes
+               2 Dir(s)  12,123,758,592 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api
+
+08/13/2026  10:53 AM    <DIR>          .
+08/13/2026  10:50 AM    <DIR>          ..
+08/13/2026  10:51 AM               505 app.py
+08/13/2026  10:54 AM               178 Dockerfile
+08/13/2026  10:52 AM                12 requirements.txt
+               3 File(s)            695 bytes
+               2 Dir(s)  12,121,251,840 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>docker build -t flask-kubernetes-api .
+[+] Building 29.2s (11/11) FINISHED                                                                docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.1s
+ => => transferring dockerfile: 217B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/python:3.11-slim                                                3.4s
+ => [auth] library/python:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load .dockerignore                                                                                  0.1s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/5] FROM docker.io/library/python:3.11-slim@sha256:90744cff8f32887f075c47d747a173ff333e9e98801667af93c357f  13.7s
+ => => resolve docker.io/library/python:3.11-slim@sha256:90744cff8f32887f075c47d747a173ff333e9e98801667af93c357fa  0.1s
+ => => sha256:0fc9203b193a8869d7e8cdb9754932db059f4a0d5b9812b000b47d1f5d0b4488 249B / 249B                         0.3s
+ => => sha256:bbaff5426d0f7209ef9826582b46945e0e6851829b308e906c9c05874cf70915 14.45MB / 14.45MB                   4.0s
+ => => sha256:2835c55197170c643a531e330159e6c5c215f044e97d1cde2ee1f3056c5ad840 1.29MB / 1.29MB                     4.8s
+ => => sha256:26c307b5e35a59ce911f5fde5b9458120ec8734e831ea2da5649a9ad14abfd3d 29.78MB / 29.78MB                   6.5s
+ => => extracting sha256:26c307b5e35a59ce911f5fde5b9458120ec8734e831ea2da5649a9ad14abfd3d                          3.7s
+ => => extracting sha256:2835c55197170c643a531e330159e6c5c215f044e97d1cde2ee1f3056c5ad840                          0.5s
+ => => extracting sha256:bbaff5426d0f7209ef9826582b46945e0e6851829b308e906c9c05874cf70915                          2.7s
+ => => extracting sha256:0fc9203b193a8869d7e8cdb9754932db059f4a0d5b9812b000b47d1f5d0b4488                          0.0s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 597B                                                                                  0.0s
+ => [2/5] WORKDIR /app                                                                                             0.7s
+ => [3/5] COPY requirements.txt .                                                                                  0.1s
+ => [4/5] RUN pip install --no-cache-dir -r requirements.txt                                                       7.5s
+ => [5/5] COPY app.py .                                                                                            0.1s
+ => exporting to image                                                                                             3.3s
+ => => exporting layers                                                                                            1.7s
+ => => exporting manifest sha256:dba532efed7c2a19ddb77949c7dc28e5d4dbeba9105e445acc44fc508e90dca9                  0.0s
+ => => exporting config sha256:b0f18e2ce37a11ec07a687dbf52c94708acaf07ce83bd6f80e71c11b113a7f75                    0.0s
+ => => exporting attestation manifest sha256:2bbdd6627d50c449f6fbc546256cd144b9ced975ae56a67f265b640a1a6805f3      0.1s
+ => => exporting manifest list sha256:c06ae81df6288e775fbf224c9a190d561ade7993a3c8f57420738454a5d59b5f             0.0s
+ => => naming to docker.io/library/flask-kubernetes-api:latest                                                     0.0s
+ => => unpacking to docker.io/library/flask-kubernetes-api:latest                                                  1.3s
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>docker images
+                                                                                                    i Info →   U  In Use
+IMAGE                                                 ID             DISK USAGE   CONTENT SIZE   EXTRA
+docker/desktop-cloud-provider-kind:v0.5.0             4ad59ce20658        595MB          162MB    U
+docker/desktop-containerd-registry-mirror:v0.0.3      179a9ea3ae47       50.3MB         16.1MB    U
+envoyproxy/envoy:v1.36.4                              08acc53db6f4        248MB         62.1MB
+evcp/booking-service:1.0.0                            21f880caeddb        210MB         50.5MB    U
+face_swap_project_for_colleague-face-swapper:latest   3d6f61ee0f46       4.35GB         1.42GB    U
+flask-kubernetes-api:latest                           c06ae81df628        211MB         51.2MB
+kindest/node:v1.34.3                                  08497ee19eac       1.35GB          395MB    U
+postgres:16-alpine                                    57c72fd2a128        420MB          117MB    U
+python:latest                                         5f1cdbcab9a5       1.63GB          433MB    U
+redis:7-alpine                                        e7723ff73d96       57.8MB         16.8MB    U
+static-website:latest                                 9d0800dc9ace       92.7MB         26.1MB    U
+ubuntu:latest                                         3131b4cc82a7        161MB         45.3MB    U
+
+C:\Users\RAKSdocker login
+       docker login
+Authenticating with existing credentials... [Username: rakshithrr]
+
+i Info → To login with a different account, run 'docker logout' followed by 'docker login'
+
+
+Login Succeeded
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>docker info
+Client:
+ Version:    29.4.1
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.44.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-agent.exe
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.20.2
+    Path:     C:\Program Files\Docker\cli-plugins\docker-ai.exe
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.33.0-desktop.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-buildx.exe
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.1.3
+    Path:     C:\Program Files\Docker\cli-plugins\docker-compose.exe
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     C:\Program Files\Docker\cli-plugins\docker-debug.exe
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.3.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-desktop.exe
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.2
+    Path:     C:\Program Files\Docker\cli-plugins\docker-dhi.exe
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     C:\Program Files\Docker\cli-plugins\docker-extension.exe
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-init.exe
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.40.4
+    Path:     C:\Program Files\Docker\cli-plugins\docker-mcp.exe
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.1.36
+    Path:     C:\Program Files\Docker\cli-plugins\docker-model.exe
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.5.85
+    Path:     C:\Program Files\Docker\cli-plugins\docker-offload.exe
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.0.25
+    Path:     C:\Program Files\Docker\cli-plugins\docker-pass.exe
+  sandbox: Docker Sandbox (Docker Inc.)
+    Version:  v0.12.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sandbox.exe
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sbom.exe
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.20.4
+    Path:     C:\Program Files\Docker\cli-plugins\docker-scout.exe
+
+Server:
+ Containers: 10
+  Running: 6
+  Paused: 0
+  Stopped: 4
+ Images: 12
+ Server Version: 29.4.1
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 77c84241c7cbdd9b4eca2591793e3d4f4317c590
+ runc version: v1.3.5-0-g488fc13e
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.6.87.2-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 12
+ Total Memory: 7.421GiB
+ Name: docker-desktop
+ ID: 4d817e16-7a52-46f7-97de-a2b05c3c3f6f
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>docker tag flask-kubernetes-api:latest rakshithrr/flask-kubernetes-api:latest
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>docker images
+                                                                                                                            i Info →   U  In Use
+IMAGE                                                 ID             DISK USAGE   CONTENT SIZE   EXTRA
+docker/desktop-cloud-provider-kind:v0.5.0             4ad59ce20658        595MB          162MB    U
+docker/desktop-containerd-registry-mirror:v0.0.3      179a9ea3ae47       50.3MB         16.1MB    U
+envoyproxy/envoy:v1.36.4                              08acc53db6f4        248MB         62.1MB
+evcp/booking-service:1.0.0                            21f880caeddb        210MB         50.5MB    U
+face_swap_project_for_colleague-face-swapper:latest   3d6f61ee0f46       4.35GB         1.42GB    U
+flask-kubernetes-api:latest                           c06ae81df628        211MB         51.2MB
+kindest/node:v1.34.3                                  08497ee19eac       1.35GB          395MB    U
+postgres:16-alpine                                    57c72fd2a128        420MB          117MB    U
+python:latest                                         5f1cdbcab9a5       1.63GB          433MB    U
+rakshithrr/flask-kubernetes-api:latest                c06ae81df628        211MB         51.2MB
+redis:7-alpine                                        e7723ff73d96       57.8MB         16.8MB    U
+static-website:latest                                 9d0800dc9ace       92.7MB         26.1MB    U
+ubuntu:latest                                         3131b4cc82a7        161MB         45.3MB    U
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>docker login
+Authenticating with existing credentials... [Username: rakshithrr]
+
+i Info → To login with a different account, run 'docker logout' followed by 'docker login'
+
+
+Login Succeeded
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>docker push rakshithrr/flask-kubernetes-api:latest
+The push refers to repository [docker.io/rakshithrr/flask-kubernetes-api]
+bbaff5426d0f: Pushed
+26c307b5e35a: Pushed
+b7aacb96284e: Pushed
+2835c5519717: Pushed
+09cd049010fa: Pushed
+0c74c94a582a: Pushed
+a16beb35f5c6: Pushed
+0fc9203b193a: Pushed
+c6a776c30e0f: Pushed
+latest: digest: sha256:c06ae81df6288e775fbf224c9a190d561ade7993a3c8f57420738454a5d59b5f size: 856
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api
+
+08/13/2026  11:08 AM    <DIR>          .
+08/13/2026  10:50 AM    <DIR>          ..
+08/13/2026  10:51 AM               505 app.py
+08/13/2026  11:07 AM               387 deployment.yaml
+08/13/2026  10:54 AM               178 Dockerfile
+08/13/2026  10:52 AM                12 requirements.txt
+08/13/2026  11:08 AM               200 service.yaml
+               5 File(s)          1,282 bytes
+               2 Dir(s)  12,143,697,920 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>kubectl apply -f deployment.yaml
+deployment.apps/flask-api-deployment created
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>kubectl get deployments
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+flask-api-deployment   0/2     2            0           6s
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>kubectl get pods
+NAME                                   READY   STATUS    RESTARTS   AGE
+flask-api-deployment-5dc8d6985-cnkpx   1/1     Running   0          33s
+flask-api-deployment-5dc8d6985-trmkq   1/1     Running   0          33s
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>kubectl apply -f service.yaml
+service/flask-api-service created
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>kubectl get services
+NAME                TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+flask-api-service   NodePort    10.96.54.208   <none>        5000:30007/TCP   8s
+kubernetes          ClusterIP   10.96.0.1      <none>        443/TCP          21m
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>kubectl get all
+NAME                                       READY   STATUS    RESTARTS   AGE
+pod/flask-api-deployment-5dc8d6985-cnkpx   1/1     Running   0          91s
+pod/flask-api-deployment-5dc8d6985-trmkq   1/1     Running   0          91s
+
+NAME                        TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+service/flask-api-service   NodePort    10.96.54.208   <none>        5000:30007/TCP   35s
+service/kubernetes          ClusterIP   10.96.0.1      <none>        443/TCP          22m
+
+NAME                                   READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/flask-api-deployment   2/2     2            2           91s
+
+NAME                                             DESIRED   CURRENT   READY   AGE
+replicaset.apps/flask-api-deployment-5dc8d6985   2         2         2       91s
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>kubectl get pods
+NAME                                   READY   STATUS    RESTARTS   AGE
+flask-api-deployment-5dc8d6985-cnkpx   1/1     Running   0          110s
+flask-api-deployment-5dc8d6985-trmkq   1/1     Running   0          110s
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>type app.py
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "Flask API is running successfully",
+        "project": "Docker and Kubernetes"
+    })
+
+@app.route("/hello")
+def hello():
+    return jsonify({
+        "message": "Hello from the Flask API!"
+    })
+
+@app.route("/status")
+def status():
+    return jsonify({
+        "status": "healthy"
+    })
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>kubectl run test-curl --rm -it --image=curlimages/curl --restart=Never-- curl http://flask-api-service:5000
+{"message":"Flask API is running successfully","project":"Docker and Kubernetes"}
+pod "test-curl" deleted from default namespace
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-17\flask-kubernetes-api>kubectl port-forward service/flask-api-service 30007:5000
+Forwarding from 127.0.0.1:30007 -> 5000
+Forwarding from [::1]:30007 -> 5000
+Handling connection for 30007
+Handling connection for 30007
+Handling connection for 30007
+Handling connection for 30007
+Handling connection for 30007
+Handling connection for 30007
