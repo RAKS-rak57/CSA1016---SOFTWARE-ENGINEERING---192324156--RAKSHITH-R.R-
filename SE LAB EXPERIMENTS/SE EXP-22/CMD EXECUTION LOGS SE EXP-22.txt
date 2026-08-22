@@ -1,0 +1,163 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22
+
+08/17/2026  11:16 AM    <DIR>          .
+08/17/2026  11:17 AM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  11,993,587,712 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22
+
+08/17/2026  11:17 AM    <DIR>          .
+08/17/2026  11:17 AM    <DIR>          ..
+08/17/2026  11:18 AM               273 index.html
+               1 File(s)            273 bytes
+               2 Dir(s)  11,992,784,896 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22
+
+08/17/2026  11:19 AM    <DIR>          .
+08/17/2026  11:17 AM    <DIR>          ..
+08/17/2026  11:19 AM                78 Dockerfile
+08/17/2026  11:18 AM               273 index.html
+               2 File(s)            351 bytes
+               2 Dir(s)  11,989,200,896 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>docker build -t exp22-static-website .
+[+] Building 3.1s (8/8) FINISHED                                                                   docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.1s
+ => => transferring dockerfile: 115B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/nginx:alpine                                                    1.9s
+ => [auth] library/nginx:pull token for registry-1.docker.io                                                       0.0s
+ => [internal] load .dockerignore                                                                                  0.1s
+ => => transferring context: 2B                                                                                    0.0s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 312B                                                                                  0.0s
+ => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22  0.1s
+ => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c  0.1s
+ => [2/2] COPY index.html /usr/share/nginx/html/index.html                                                         0.1s
+ => exporting to image                                                                                             0.6s
+ => => exporting layers                                                                                            0.2s
+ => => exporting manifest sha256:80631f92100e16eb135163bd1113e203147ea7906440fa0d281e0db7380fb6e5                  0.0s
+ => => exporting config sha256:b8c5391905bbd87d9fc96398ccd381f9685826f6ef94b8f2812a9e7477bff12d                    0.0s
+ => => exporting attestation manifest sha256:7c4d5fbe48f5694fa438843efc5cda40227ce4e8bae901d4be6ee584086c410b      0.1s
+ => => exporting manifest list sha256:c67aa5c045e6158b7e404b17a5a98725f2a5766f6e88a89855cc18835fd0d0f7             0.0s
+ => => naming to docker.io/library/exp22-static-website:latest                                                     0.0s
+ => => unpacking to docker.io/library/exp22-static-website:latest                                                  0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/vqcu7im69y3h3o9ivdrn4bilk
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>docker images
+                                                                                                    i Info →   U  In Use
+IMAGE                                                                   ID             DISK USAGE   CONTENT SIZE   EXTRA
+curlimages/curl:latest@sha256:7c12af72ceb38b7432ab85e1a265cff6ae58e06f95539d539b654f2cfa64bb13
+                                                                        7c12af72ceb3       10.7MB         10.7MB
+docker/desktop-cloud-provider-kind:v0.5.0                               4ad59ce20658        595MB          162MB    U
+docker/desktop-containerd-registry-mirror:v0.0.3                        179a9ea3ae47       50.3MB         16.1MB    U
+envoyproxy/envoy:v1.36.4                                                08acc53db6f4        248MB         62.1MB
+evcp/booking-service:1.0.0                                              0bb2f4525a1c        210MB         50.5MB
+exp19-cicd-demo:latest                                                  8b85531caf59       92.7MB         26.1MB    U
+exp21-flask-todo:latest                                                 158d6a40b7d8        211MB         51.2MB    U
+exp22-static-website:latest                                             c67aa5c045e6       92.7MB         26.1MB
+face_swap_project_for_colleague-face-swapper:latest                     3d6f61ee0f46       4.35GB         1.42GB    U
+flask-kubernetes-api:latest                                             c06ae81df628        211MB         51.2MB
+jenkins-cicd-demo:latest                                                3b720741ca02       92.7MB         26.1MB    U
+jenkins/jenkins:lts-jdk21                                               8547df3b0db2        801MB          290MB    U
+kindest/node:v1.34.3                                                    08497ee19eac       1.35GB          395MB    U
+postgres:16-alpine                                                      57c72fd2a128        420MB          117MB    U
+python:latest                                                           5f1cdbcab9a5       1.63GB          433MB    U
+rakshithrr/exp19-cicd-demo:latest                                       3dd48d186e73       92.7MB         26.1MB    U
+rakshithrr/exp21-flask-todo:latest                                      158d6a40b7d8        211MB         51.2MB    U
+rakshithrr/flask-kubernetes-api:latest                                  c06ae81df628        211MB         51.2MB
+redis:7-alpine                                                          e7723ff73d96       57.8MB         16.8MB    U
+static-website:latest                                                   9d0800dc9ace       92.7MB         26.1MB    U
+ubuntu:latest                                                           3131b4cc82a7        161MB         45.3MB    U
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>docker tag exp22-static-website:latest rakshithrr/exp22-static-website:latest
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>docker images
+                                                                                                                            i Info →   U  In Use
+IMAGE                                                                                           ID             DISK USAGE   CONTENT SIZE   EXTRA
+curlimages/curl:latest@sha256:7c12af72ceb38b7432ab85e1a265cff6ae58e06f95539d539b654f2cfa64bb13
+                                                                                                7c12af72ceb3       10.7MB         10.7MB
+docker/desktop-cloud-provider-kind:v0.5.0                                                       4ad59ce20658        595MB          162MB    U
+docker/desktop-containerd-registry-mirror:v0.0.3                                                179a9ea3ae47       50.3MB         16.1MB    U
+envoyproxy/envoy:v1.36.4                                                                        08acc53db6f4        248MB         62.1MB
+evcp/booking-service:1.0.0                                                                      0bb2f4525a1c        210MB         50.5MB
+exp19-cicd-demo:latest                                                                          8b85531caf59       92.7MB         26.1MB    U
+exp21-flask-todo:latest                                                                         158d6a40b7d8        211MB         51.2MB    U
+exp22-static-website:latest                                                                     c67aa5c045e6       92.7MB         26.1MB
+face_swap_project_for_colleague-face-swapper:latest                                             3d6f61ee0f46       4.35GB         1.42GB    U
+flask-kubernetes-api:latest                                                                     c06ae81df628        211MB         51.2MB
+jenkins-cicd-demo:latest                                                                        3b720741ca02       92.7MB         26.1MB    U
+jenkins/jenkins:lts-jdk21                                                                       8547df3b0db2        801MB          290MB    U
+kindest/node:v1.34.3                                                                            08497ee19eac       1.35GB          395MB    U
+postgres:16-alpine                                                                              57c72fd2a128        420MB          117MB    U
+python:latest                                                                                   5f1cdbcab9a5       1.63GB          433MB    U
+rakshithrr/exp19-cicd-demo:latest                                                               3dd48d186e73       92.7MB         26.1MB    U
+rakshithrr/exp21-flask-todo:latest                                                              158d6a40b7d8        211MB         51.2MB    U
+rakshithrr/exp22-static-website:latest                                                          c67aa5c045e6       92.7MB         26.1MB
+rakshithrr/flask-kubernetes-api:latest                                                          c06ae81df628        211MB         51.2MB
+redis:7-alpine                                                                                  e7723ff73d96       57.8MB         16.8MB    U
+static-website:latest                                                                           9d0800dc9ace       92.7MB         26.1MB    U
+ubuntu:latest                                                                                   3131b4cc82a7        161MB         45.3MB    U
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>docker push rakshithrr/exp22-static-website:latest
+The push refers to repository [docker.io/rakshithrr/exp22-static-website]
+9a3ea8dab45c: Pushed
+d0008c891db4: Pushed
+46f977ee452f: Pushed
+7a8f254c68f1: Pushed
+62bec68d7c31: Pushed
+55afa1ecc21d: Mounted from library/postgres
+3cd534fe98c6: Pushed
+390dc935348d: Pushed
+1223f016b4e4: Pushed
+46519e7231d2: Pushed
+latest: digest: sha256:c67aa5c045e6158b7e404b17a5a98725f2a5766f6e88a89855cc18835fd0d0f7 size: 856
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>docker rmi rakshithrr/exp22-static-website:latest
+Untagged: rakshithrr/exp22-static-website:latest
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>docker pull rakshithrr/exp22-static-website:latest
+latest: Pulling from rakshithrr/exp22-static-website
+Digest: sha256:c67aa5c045e6158b7e404b17a5a98725f2a5766f6e88a89855cc18835fd0d0f7
+Status: Downloaded newer image for rakshithrr/exp22-static-website:latest
+docker.io/rakshithrr/exp22-static-website:latest
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview rakshithrr/exp22-static-website:latest
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>docker run -d --name exp22-static-container -p 8080:80 rakshithrr/exp22-static-website:latest
+7304c6120765c7457151be6f01d74026ce3a7ad6b29d69090ac7a732d78aa08e
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED          STATUS                 PORTS             NAMES
+7304c6120765   rakshithrr/exp22-static-website:latest         "/docker-entrypoint.…"   8 seconds ago    Up 6 seconds           0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       exp22-static-container
+8ffc4cb2c63a   exp21-flask-todo                               "python app.py"          31 minutes ago   Up 31 minutes          0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   exp21-flask-todo-container
+9bf4c54232da   rakshithrr/exp19-cicd-demo:latest              "/docker-entrypoint.…"   2 hours ago      Up 2 hours             0.0.0.0:8085->80/tcp, [::]:8085->80/tcp       exp19-github-deployed
+46a838ed7363   exp19-cicd-demo                                "/docker-entrypoint.…"   3 hours ago      Up 3 hours             0.0.0.0:8084->80/tcp, [::]:8084->80/tcp       exp19-cicd-demo-container
+f84b90de061e   21f880caeddb                                   "docker-entrypoint.s…"   8 days ago       Up 3 hours (healthy)   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   evcp-booking-api
+f7d1ca11f6db   postgres:16-alpine                             "docker-entrypoint.s…"   8 days ago       Up 3 hours (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp   evcp-postgres
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   8 days ago       Up 3 hours (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago     Up 3 hours             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-22>

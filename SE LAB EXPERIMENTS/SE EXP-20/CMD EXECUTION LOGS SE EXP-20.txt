@@ -1,0 +1,381 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   ../../ASSESSMENT_TOOL/CO3- AT-1/evcp-booking-service (modified content)
+        modified:   ../../ASSESSMENT_TOOL/CO4- AT-1/evcp-booking-service (untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../SE ASSESSMENTS/
+        ../SE EXP-19/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git init
+Initialized empty Git repository in C:/Users/RAKSHITH.R.R/Downloads/SLOT-D SOFTWARE ENGINERING/SE LAB EXPERIMENTS/SE EXP-20/.git/
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git branch -M main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git remote add origin https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git remote -v
+origin  https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git (fetch)
+origin  https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git init
+Reinitialized existing Git repository in C:/Users/RAKSHITH.R.R/Downloads/SLOT-D SOFTWARE ENGINERING/SE LAB EXPERIMENTS/SE EXP-20/.git/
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git branch -M main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>echo Module 1 - User Interface > module1.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>echo Module 2 - Data Processing > module2.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>echo Module 3 - Testing > module3.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20
+
+08/17/2026  10:06 AM    <DIR>          .
+08/17/2026  10:02 AM    <DIR>          ..
+08/17/2026  10:06 AM                28 module1.txt
+08/17/2026  10:06 AM                29 module2.txt
+08/17/2026  10:06 AM                21 module3.txt
+08/17/2026  10:06 AM               695 README.md
+               4 File(s)            773 bytes
+               2 Dir(s)  12,398,137,344 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git commit -m "Initial project setup"
+[main (root-commit) 7989150] Initial project setup
+ 4 files changed, 27 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 module1.txt
+ create mode 100644 module2.txt
+ create mode 100644 module3.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git commit -m "Initial project setup"
+On branch main
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git remote -v
+origin  https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git (fetch)
+origin  https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 815 bytes | 135.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git branch
+* main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout -b module-1
+Switched to a new branch 'module-1'
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git branch
+  main
+* module-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git status
+On branch module-1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   module1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git add module1.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git commit -m "Add Module 1 user interface details"
+[module-1 f5545a9] Add Module 1 user interface details
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git push -u origin module-1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 395 bytes | 98.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'module-1' on GitHub by visiting:
+remote:      https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL/pull/new/module-1
+remote:
+To https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git
+ * [new branch]      module-1 -> module-1
+branch 'module-1' set up to track 'origin/module-1'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 906 bytes | 129.00 KiB/s, done.
+From https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL
+ * branch            main       -> FETCH_HEAD
+   7989150..c6db448  main       -> origin/main
+Updating 7989150..c6db448
+Fast-forward
+ module1.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout -b module-2
+Switched to a new branch 'module-2'
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git branch
+  main
+  module-1
+* module-2
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git status
+On branch module-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   module2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git add module2.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git commit -m "Add Module 2 data processing details"
+[module-2 8394783] Add Module 2 data processing details
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git push -u origin module-2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 403 bytes | 201.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'module-2' on GitHub by visiting:
+remote:      https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL/pull/new/module-2
+remote:
+To https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git
+ * [new branch]      module-2 -> module-2
+branch 'module-2' set up to track 'origin/module-2'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 906 bytes | 181.00 KiB/s, done.
+From https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL
+ * branch            main       -> FETCH_HEAD
+   c6db448..0ea2a4a  main       -> origin/main
+Updating c6db448..0ea2a4a
+Fast-forward
+ module2.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout -b module-3
+Switched to a new branch 'module-3'
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git add module3.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git commit -m "Add Module 3 testing details"
+[module-3 8dc9757] Add Module 3 testing details
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git push -u origin module-3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 384 bytes | 192.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'module-3' on GitHub by visiting:
+remote:      https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL/pull/new/module-3
+remote:
+To https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git
+ * [new branch]      module-3 -> module-3
+branch 'module-3' set up to track 'origin/module-3'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git branch
+  main
+  module-1
+  module-2
+* module-3
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 902 bytes | 180.00 KiB/s, done.
+From https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL
+ * branch            main       -> FETCH_HEAD
+   0ea2a4a..14f199b  main       -> origin/main
+Updating 0ea2a4a..14f199b
+Fast-forward
+ module3.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout -b conflict-branch
+Switched to a new branch 'conflict-branch'
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git branch
+* conflict-branch
+  main
+  module-1
+  module-2
+  module-3
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git add module1.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git commit -m "Modify Module 1 from conflict branch"
+[conflict-branch 3e2e10e] Modify Module 1 from conflict branch
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git push -u origin conflict-branch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'conflict-branch' on GitHub by visiting:
+remote:      https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL/pull/new/conflict-branch
+remote:
+To https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git
+ * [new branch]      conflict-branch -> conflict-branch
+branch 'conflict-branch' set up to track 'origin/conflict-branch'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git add module1.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git commit -m "Modify Module 1 from main branch"
+[main 4707acb] Modify Module 1 from main branch
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 337 bytes | 168.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git
+   14f199b..4707acb  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git branch
+  conflict-branch
+* main
+  module-1
+  module-2
+  module-3
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout -b conflict-branch
+fatal: a branch named 'conflict-branch' already exists
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git checkout conflict-branch
+Switched to branch 'conflict-branch'
+Your branch is up to date with 'origin/conflict-branch'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git status
+On branch conflict-branch
+Your branch is up to date with 'origin/conflict-branch'.
+
+nothing to commit, working tree clean
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git merge main
+Auto-merging module1.txt
+CONFLICT (content): Merge conflict in module1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git status
+On branch conflict-branch
+Your branch is up to date with 'origin/conflict-branch'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   module1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git status
+On branch conflict-branch
+Your branch is up to date with 'origin/conflict-branch'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   module1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git add module1.txt
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git status
+On branch conflict-branch
+Your branch is up to date with 'origin/conflict-branch'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   module1.txt
+
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git commit -m "Resolve merge conflict in module1"
+[conflict-branch 053c6a2] Resolve merge conflict in module1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 426 bytes | 213.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RAKS-rak57/SE-EXP-20-GITHUB-VERSION-CONTROL.git
+   3e2e10e..053c6a2  conflict-branch -> conflict-branch
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-20>

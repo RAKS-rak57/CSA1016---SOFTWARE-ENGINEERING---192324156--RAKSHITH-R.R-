@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EXP-23 Multi-Container Application</title>
+</head>
+<body>
+    <h1>Multi-Container Application</h1>
+    <h2>Frontend - Kubernetes</h2>
+
+    <p>This application contains:</p>
+
+    <ul>
+        <li>Frontend: Nginx</li>
+        <li>Backend: Flask API</li>
+        <li>Database: PostgreSQL</li>
+    </ul>
+
+    <button onclick="checkBackend()">Check Backend</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkBackend() {
+            fetch('/api/')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("result").innerText =
+                        data.message;
+                })
+                .catch(error => {
+                    document.getElementById("result").innerText =
+                        "Backend connection failed";
+                });
+        }
+    </script>
+</body>
+</html>

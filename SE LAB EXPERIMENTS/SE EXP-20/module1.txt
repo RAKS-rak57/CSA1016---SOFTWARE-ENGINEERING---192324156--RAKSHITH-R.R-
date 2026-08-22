@@ -1,0 +1,5 @@
+Module 1: User Interface
+
+This module contains the user interface design and interaction details.
+
+Conflict resolved successfully between main and conflict-branch.

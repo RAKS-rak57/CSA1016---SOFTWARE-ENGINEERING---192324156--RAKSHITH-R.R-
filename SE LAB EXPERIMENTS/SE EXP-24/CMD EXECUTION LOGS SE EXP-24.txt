@@ -1,0 +1,279 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>python -m pytest
+================================================= test session starts =================================================
+platform win32 -- Python 3.12.4, pytest-9.0.3, pluggy-1.6.0
+rootdir: C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24
+plugins: dash-3.1.1
+collected 2 items
+
+test_app.py ..                                                                                                   [100%]
+
+================================================== 2 passed in 0.07s ==================================================
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker build -t exp24-flask-cicd .
+[+] Building 40.1s (11/11) FINISHED                                                                docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.4s
+ => => transferring dockerfile: 218B                                                                               0.2s
+ => [internal] load metadata for docker.io/library/python:3.12-slim                                                5.7s
+ => [auth] library/python:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load .dockerignore                                                                                  0.1s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/5] FROM docker.io/library/python:3.12-slim@sha256:2c941e860699f878900b0edc2403613c234d4b32eda3cc9fa7036991  0.1s
+ => => resolve docker.io/library/python:3.12-slim@sha256:2c941e860699f878900b0edc2403613c234d4b32eda3cc9fa7036991  0.1s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 6.79kB                                                                                0.0s
+ => CACHED [2/5] WORKDIR /app                                                                                      0.0s
+ => [3/5] COPY requirements.txt .                                                                                  0.2s
+ => [4/5] RUN pip install --no-cache-dir -r requirements.txt                                                      25.8s
+ => [5/5] COPY . .                                                                                                 0.2s
+ => exporting to image                                                                                             7.0s
+ => => exporting layers                                                                                            4.3s
+ => => exporting manifest sha256:4cf0611cdf154e6ba9ca41e893914f32e38d4eba3dcf5a6b5f085dd7210f24f8                  0.0s
+ => => exporting config sha256:49b23e643dc83b5b69fe86701f12a799680acb4333264a6134b401dcefbdd559                    0.0s
+ => => exporting attestation manifest sha256:80d7af97c1372ebd036f77682ba7338d478e3a6ee89836efebe9d27b3fad11d6      0.1s
+ => => exporting manifest list sha256:fd4faab6b091177af45904b032bf3c3086714adca7aadb8a08a919755f75208e             0.0s
+ => => naming to docker.io/library/exp24-flask-cicd:latest                                                         0.0s
+ => => unpacking to docker.io/library/exp24-flask-cicd:latest                                                      2.3s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/gfwo0g0cywxk149uu06xkrb6t
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker run -d --name exp24-flask-container -p 5002:5000 exp24-flask-cicd
+f1ed8735ff2db810c2d4126f3e31983b3b64261a8ba071c1634b00e4ff10e8a4
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED         STATUS                        PORTS                                         NAMES
+f1ed8735ff2d   exp24-flask-cicd                               "python app.py"          9 seconds ago   Up 8 seconds                  0.0.0.0:5002->5000/tcp, [::]:5002->5000/tcp   exp24-flask-container
+f84b90de061e   21f880caeddb                                   "docker-entrypoint.s…"   13 days ago     Up About a minute (healthy)   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   evcp-booking-api
+f7d1ca11f6db   postgres:16-alpine                             "docker-entrypoint.s…"   13 days ago     Up About a minute (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp   evcp-postgres
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   13 days ago     Up About a minute (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago    Up About a minute             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker tag exp24-flask-cicd:latest rakshithrr/exp24-flask-cicd:latest
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker push rakshithrr/exp24-flask-cicd:latest
+The push refers to repository [docker.io/rakshithrr/exp24-flask-cicd]
+26c307b5e35a: Mounted from rakshithrr/flask-kubernetes-api
+fa18dfb1257a: Mounted from rakshithrr/exp23-backend
+6760bfe2ff00: Mounted from rakshithrr/exp23-backend
+922d4777328c: Pushed
+d12f0beb0bed: Mounted from rakshithrr/exp23-backend
+07c94aa54127: Pushed
+67cd024069cc: Pushed
+5a937479169d: Pushed
+b952fe9f6810: Mounted from rakshithrr/exp23-backend
+latest: digest: sha256:fd4faab6b091177af45904b032bf3c3086714adca7aadb8a08a919755f75208e size: 856
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker images
+                                                                                                                                                                i Info →   U  In Use
+IMAGE                                                                                            ID             DISK USAGE   CONTENT SIZE   EXTRA
+curlimages/curl:latest@sha256:7c12af72ceb38b7432ab85e1a265cff6ae58e06f95539d539b654f2cfa64bb13   7c12af72ceb3       10.7MB         10.7MB
+docker/desktop-cloud-provider-kind:v0.5.0                                                        4ad59ce20658        595MB          162MB    U
+docker/desktop-containerd-registry-mirror:v0.0.3                                                 179a9ea3ae47       50.3MB         16.1MB    U
+envoyproxy/envoy:v1.36.4                                                                         08acc53db6f4        248MB         62.1MB
+evcp/booking-service:1.0.0                                                                       0bb2f4525a1c        210MB         50.5MB
+exp19-cicd-demo:latest                                                                           8b85531caf59       92.7MB         26.1MB    U
+exp21-flask-todo:latest                                                                          158d6a40b7d8        211MB         51.2MB    U
+exp22-static-website:latest                                                                      c67aa5c045e6       92.7MB         26.1MB    U
+exp23-backend:latest                                                                             84f1bbe8f693        197MB         48.2MB    U
+exp23-frontend:latest                                                                            524882358d80       93.4MB         26.3MB
+exp24-flask-cicd:latest                                                                          fd4faab6b091        216MB         52.3MB    U
+face_swap_project_for_colleague-face-swapper:latest                                              3d6f61ee0f46       4.35GB         1.42GB    U
+flask-kubernetes-api:latest                                                                      c06ae81df628        211MB         51.2MB
+jenkins-cicd-demo:latest                                                                         3b720741ca02       92.7MB         26.1MB    U
+jenkins/jenkins:lts-jdk21                                                                        8547df3b0db2        801MB          290MB    U
+kindest/node:v1.34.3                                                                             08497ee19eac       1.35GB          395MB    U
+postgres:16-alpine                                                                               57c72fd2a128        420MB          117MB    U
+python:latest                                                                                    5f1cdbcab9a5       1.63GB          433MB    U
+rakshithrr/exp19-cicd-demo:latest                                                                3dd48d186e73       92.7MB         26.1MB    U
+rakshithrr/exp21-flask-todo:latest                                                               158d6a40b7d8        211MB         51.2MB    U
+rakshithrr/exp22-static-website:latest                                                           c67aa5c045e6       92.7MB         26.1MB    U
+rakshithrr/exp23-backend:latest                                                                  84f1bbe8f693        197MB         48.2MB    U
+rakshithrr/exp23-frontend:latest                                                                 524882358d80       93.4MB         26.3MB
+rakshithrr/exp24-flask-cicd:latest                                                               fd4faab6b091        216MB         52.3MB    U
+rakshithrr/flask-kubernetes-api:latest                                                           c06ae81df628        211MB         51.2MB
+redis:7-alpine                                                                                   e7723ff73d96       57.8MB         16.8MB    U
+static-website:latest                                                                            9d0800dc9ace       92.7MB         26.1MB    U
+ubuntu:latest                                                                                    3131b4cc82a7        161MB         45.3MB    U
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git remote add origin https://github.com/RAKS-rak57/exp24-flask-cicd.git
+error: remote origin already exists.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git remote -v
+origin  https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git (fetch)
+origin  https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git remote set origin https://github.com/RAKS-rak57/exp24-flask-cicd.git
+error: unknown subcommand: `set'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --[no-]verbose    be verbose; must be placed before a subcommand
+
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git remote set-url origin https://github.com/RAKS-rak57/exp24-flask-cicd.git
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git remote -v
+origin  https://github.com/RAKS-rak57/exp24-flask-cicd.git (fetch)
+origin  https://github.com/RAKS-rak57/exp24-flask-cicd.git (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git commit -m "Initial commit - EXP-24 Flask CI/CD application"
+[main dc84fe1] Initial commit - EXP-24 Flask CI/CD application
+ 6 files changed, 57 insertions(+)
+ create mode 100644 SE LAB EXPERIMENTS/SE EXP-24/Dockerfile
+ create mode 100644 SE LAB EXPERIMENTS/SE EXP-24/__pycache__/app.cpython-312.pyc
+ create mode 100644 SE LAB EXPERIMENTS/SE EXP-24/__pycache__/test_app.cpython-312-pytest-9.0.3.pyc
+ create mode 100644 SE LAB EXPERIMENTS/SE EXP-24/app.py
+ create mode 100644 SE LAB EXPERIMENTS/SE EXP-24/requirements.txt
+ create mode 100644 SE LAB EXPERIMENTS/SE EXP-24/test_app.py
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git branch -M main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git push -u origin main
+Enumerating objects: 268, done.
+Counting objects: 100% (268/268), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (218/218), done.
+Writing objects: 100% (268/268), 32.69 MiB | 18.75 MiB/s, done.
+Total 268 (delta 45), reused 110 (delta 32), pack-reused 0 (from 0)
+error: RPC failed; HTTP 408 curl 22 The requested URL returned error: 408
+send-pack: unexpected disconnect while reading sideband packet
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git push -u origin main
+Enumerating objects: 268, done.
+Counting objects: 100% (268/268), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (218/218), done.
+Writing objects: 100% (268/268), 32.69 MiB | 19.89 MiB/s, done.
+Total 268 (delta 45), reused 110 (delta 32), pack-reused 0 (from 0)
+error: RPC failed; HTTP 408 curl 22 The requested URL returned error: 408
+send-pack: unexpected disconnect while reading sideband packet
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>rmdir /s /q .git
+The system cannot find the file specified.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>rmdir /s /q .git
+The system cannot find the file specified.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git remote -v
+origin  https://github.com/RAKS-rak57/exp24-flask-cicd.git (fetch)
+origin  https://github.com/RAKS-rak57/exp24-flask-cicd.git (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git init
+Initialized empty Git repository in C:/Users/RAKSHITH.R.R/Downloads/SLOT-D SOFTWARE ENGINERING/SE LAB EXPERIMENTS/SE EXP-24/.git/
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git commit -m "Initial commit - EXP-24 Flask CI/CD"
+[master (root-commit) e1804d5] Initial commit - EXP-24 Flask CI/CD
+ 6 files changed, 57 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 __pycache__/app.cpython-312.pyc
+ create mode 100644 __pycache__/test_app.cpython-312-pytest-9.0.3.pyc
+ create mode 100644 app.py
+ create mode 100644 requirements.txt
+ create mode 100644 test_app.py
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git branch -M main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git remote add origin https://github.com/RAKS-rak57/exp24-flask-cicd.git
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 3.04 KiB | 622.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/RAKS-rak57/exp24-flask-cicd.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>mkdir .github
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>mkdir .github\workflows
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>dir .github\workflows
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24\.github\workflows
+
+08/22/2026  11:14 AM    <DIR>          .
+08/22/2026  11:13 AM    <DIR>          ..
+08/22/2026  11:14 AM             1,134 ci-cd.yml
+               1 File(s)          1,134 bytes
+               2 Dir(s)   9,095,675,904 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git commit -m "Add GitHub Actions CI/CD pipeline"
+[main 69aafad] Add GitHub Actions CI/CD pipeline
+ 1 file changed, 52 insertions(+)
+ create mode 100644 .github/workflows/ci-cd.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 788 bytes | 262.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RAKS-rak57/exp24-flask-cicd.git
+   e1804d5..69aafad  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker pull rakshithrr/exp24-flask-cicd:latest
+latest: Pulling from rakshithrr/exp24-flask-cicd
+95cba42048f1: Pull complete
+93c574b7f4b9: Pull complete
+766987711f50: Pull complete
+81ed0a3ee2fd: Pull complete
+Digest: sha256:d89f74f8a7eb8198477b1642c994b52566b12ebc6a3931e789132eb0d62dda94
+Status: Downloaded newer image for rakshithrr/exp24-flask-cicd:latest
+docker.io/rakshithrr/exp24-flask-cicd:latest
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview rakshithrr/exp24-flask-cicd:latest
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker stop exp24-flask-container
+exp24-flask-container
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker rm exp24-flask-container
+exp24-flask-container
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker run -d --name exp24-deployed -p 5002:5000 rakshithrr/exp24-flask-cicd:latest
+0cb201483126e720a2a341f1c5227611c27a710ee9dc50a04f450105e9742501
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED          STATUS                    PORTS                                         NAMES
+0cb201483126   rakshithrr/exp24-flask-cicd:latest             "python app.py"          10 seconds ago   Up 9 seconds              0.0.0.0:5002->5000/tcp, [::]:5002->5000/tcp   exp24-deployed
+f84b90de061e   21f880caeddb                                   "docker-entrypoint.s…"   13 days ago      Up 58 minutes (healthy)   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   evcp-booking-api
+f7d1ca11f6db   postgres:16-alpine                             "docker-entrypoint.s…"   13 days ago      Up 58 minutes (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp   evcp-postgres
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   13 days ago      Up 58 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago     Up 58 minutes             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>az appservice plan create --name exp24-plan --resource-group exp24-rg --sku F1 --is-linux
+'az' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-24>

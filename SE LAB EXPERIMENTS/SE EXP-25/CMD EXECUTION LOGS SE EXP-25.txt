@@ -1,0 +1,66 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25>git clone https://github.com/RAKS-rak57/SE-EXP-25-GITHUB-PROJECT.git
+Cloning into 'SE-EXP-25-GITHUB-PROJECT'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25>cd SE-EXP-25-GITHUB-PROJECT
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25\SE-EXP-25-GITHUB-PROJECT>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25\SE-EXP-25-GITHUB-PROJECT
+
+08/22/2026  08:22 PM    <DIR>          .
+08/22/2026  08:22 PM    <DIR>          ..
+08/22/2026  08:22 PM                82 README.md
+               1 File(s)             82 bytes
+               2 Dir(s)  10,109,345,792 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25\SE-EXP-25-GITHUB-PROJECT>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25\SE-EXP-25-GITHUB-PROJECT>git add README.md
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25\SE-EXP-25-GITHUB-PROJECT>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25\SE-EXP-25-GITHUB-PROJECT>git remote -v
+origin  https://github.com/RAKS-rak57/SE-EXP-25-GITHUB-PROJECT.git (fetch)
+origin  https://github.com/RAKS-rak57/SE-EXP-25-GITHUB-PROJECT.git (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25\SE-EXP-25-GITHUB-PROJECT>git commit -m "Update README with project description"
+[main 2b25a47] Update README with project description
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25\SE-EXP-25-GITHUB-PROJECT>git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 574 bytes | 143.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/RAKS-rak57/SE-EXP-25-GITHUB-PROJECT.git
+   dbe05f5..2b25a47  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-25\SE-EXP-25-GITHUB-PROJECT>

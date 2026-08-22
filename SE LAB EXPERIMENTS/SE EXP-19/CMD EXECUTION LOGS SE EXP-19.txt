@@ -1,0 +1,251 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>cd
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>docker build -t exp19-cicd-demo .
+[+] Building 4.3s (7/7) FINISHED                                                                   docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.1s
+ => => transferring dockerfile: 119B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/nginx:alpine                                                    3.0s
+ => [internal] load .dockerignore                                                                                  0.1s
+ => => transferring context: 2B                                                                                    0.0s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 252B                                                                                  0.0s
+ => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22  0.1s
+ => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c  0.1s
+ => [2/2] COPY index.html /usr/share/nginx/html/index.html                                                         0.1s
+ => exporting to image                                                                                             0.6s
+ => => exporting layers                                                                                            0.2s
+ => => exporting manifest sha256:33e5a50dab841717b5206c82ef275e7e06a8e3fb592f03f72c5fbe924f7ae8e9                  0.0s
+ => => exporting config sha256:0332166f2409e699d6d4044d61c5f0598a1c007e922108bf73e6240727bfd31c                    0.0s
+ => => exporting attestation manifest sha256:04da26e3c54d63c79fffa857de177679716fc79bc57b288501046a8b82285570      0.1s
+ => => exporting manifest list sha256:8b85531caf59789b88869e5e6e617601566b55d98485501f975ad42f571a7faa             0.0s
+ => => naming to docker.io/library/exp19-cicd-demo:latest                                                          0.0s
+ => => unpacking to docker.io/library/exp19-cicd-demo:latest                                                       0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/qvy4p9kys6nzsdhhfe25m0fos
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>docker run -d --name exp19-cicd-demo-container -p 8084:80 exp19-cicd-demo
+46a838ed73635d917c4f75c96508a13d871edb587e4a137d761dfba01243668b
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED              STATUS                    PORTS                    NAMES
+46a838ed7363   exp19-cicd-demo                                "/docker-entrypoint.…"   About a minute ago   Up About a minute         0.0.0.0:8084->80/tcp, [::]:8084->80/tcp       exp19-cicd-demo-container
+f84b90de061e   21f880caeddb                                   "docker-entrypoint.s…"   8 days ago           Up 10 minutes (healthy)   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   evcp-booking-api
+f7d1ca11f6db   postgres:16-alpine                             "docker-entrypoint.s…"   8 days ago           Up 10 minutes (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp   evcp-postgres
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   8 days ago           Up 10 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago         Up 10 minutes             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git remote-v
+git: 'remote-v' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote-fd
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git remote -v
+origin  https://github.com/RAKS-rak57/CSA1016---SOFTWARE-ENGINEERING---192324156--RAKSHITH-R.R- (fetch)
+origin  https://github.com/RAKS-rak57/CSA1016---SOFTWARE-ENGINEERING---192324156--RAKSHITH-R.R- (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git remote set-url origin https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git remote -v
+origin  https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git (fetch)
+origin  https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   ../../ASSESSMENT_TOOL/CO3- AT-1/evcp-booking-service (modified content)
+        modified:   ../../ASSESSMENT_TOOL/CO4- AT-1/evcp-booking-service (untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../SE ASSESSMENTS/
+        ./
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git rev-parse --show-toplevel
+C:/Users/RAKSHITH.R.R/Downloads/SLOT-D SOFTWARE ENGINERING
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>dir /a
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19
+
+08/17/2026  08:35 AM    <DIR>          .
+08/17/2026  08:33 AM    <DIR>          ..
+08/17/2026  08:36 AM                82 Dockerfile
+08/17/2026  08:35 AM               213 index.html
+               2 File(s)            295 bytes
+               2 Dir(s)  12,878,721,024 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git init
+Initialized empty Git repository in C:/Users/RAKSHITH.R.R/Downloads/SLOT-D SOFTWARE ENGINERING/SE LAB EXPERIMENTS/SE EXP-19/.git/
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Dockerfile
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git rev-parse --show-toplevel
+C:/Users/RAKSHITH.R.R/Downloads/SLOT-D SOFTWARE ENGINERING/SE LAB EXPERIMENTS/SE EXP-19
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git branch -M main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git remote add origin https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git remote -v
+origin  https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git (fetch)
+origin  https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git (push)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git add Dockerfile index.html
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Dockerfile
+        new file:   index.html
+
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git commit -m "Initial EXP-19 Docker application"
+[main (root-commit) 50a6453] Initial EXP-19 Docker application
+ 2 files changed, 15 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 index.html
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 502 bytes | 167.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>mkdir .github
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>mkdir .github\workflows
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git add .github\workflows\docker.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git commit -m "Add GitHub Actions CI CD workflow"
+[main d6f0bf9] Add GitHub Actions CI CD workflow
+ 1 file changed, 31 insertions(+)
+ create mode 100644 .github/workflows/docker.yml
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 750 bytes | 250.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git
+   50a6453..d6f0bf9  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git commit -m "Update application for CI CD test"
+[main 302eaab] Update application for CI CD test
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 334 bytes | 167.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git
+   d6f0bf9..302eaab  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git commit -m "Verify Docker Hub credentials"
+[main c1f9f17] Verify Docker Hub credentials
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 601 bytes | 150.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git
+   302eaab..c1f9f17  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git add .
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git commit -m "Fix Docker Hub image push"
+[main acf5dd7] Fix Docker Hub image push
+ 1 file changed, 3 insertions(+), 7 deletions(-)
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 523 bytes | 174.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RAKS-rak57/SE-EXP-19-CICD-GITHUB.git
+   c1f9f17..acf5dd7  main -> main
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>docker pull rakshithrr/exp19-cicd-demo:latest
+latest: Pulling from rakshithrr/exp19-cicd-demo
+unknown: failed to copy: httpReadSeeker: failed open: unexpected status from GET request to https://registry-1.docker.io/v2/rakshithrr/exp19-cicd-demo/blobs/sha256:8a94c2c91cc37571b53f9e68883b6840c07e834dbdb91b70fa77f3078acb0226: 502 Bad Gateway
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>docker login
+Authenticating with existing credentials... [Username: rakshithrr]
+
+i Info → To login with a different account, run 'docker logout' followed by 'docker login'
+
+
+Login Succeeded
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>docker pull rakshithrr/exp19-cicd-demo:latest
+latest: Pulling from rakshithrr/exp19-cicd-demo
+e9465023b3a2: Pull complete
+Digest: sha256:3dd48d186e7361afa87830ecdbf90b61a70e9ed726595630d41653d11369afc7
+Status: Downloaded newer image for rakshithrr/exp19-cicd-demo:latest
+docker.io/rakshithrr/exp19-cicd-demo:latest
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview rakshithrr/exp19-cicd-demo:latest
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>docker run -d --name exp19-github-deployed -p 8085:80 rakshithrr/exp19-cicd-demo:latest
+9bf4c54232da754a65d380a0199da02e869704efe8e6e7197bf5cfc2c0957e34
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED             STATUS                       PORTS                      NAMES
+9bf4c54232da   rakshithrr/exp19-cicd-demo:latest              "/docker-entrypoint.…"   9 seconds ago       Up 8 seconds                 0.0.0.0:8085->80/tcp, [::]:8085->80/tcp       exp19-github-deployed
+46a838ed7363   exp19-cicd-demo                                "/docker-entrypoint.…"   About an hour ago   Up About an hour             0.0.0.0:8084->80/tcp, [::]:8084->80/tcp       exp19-cicd-demo-container
+f84b90de061e   21f880caeddb                                   "docker-entrypoint.s…"   8 days ago          Up About an hour (healthy)   0.0.0.0:3000->3000/tcp,[::]:3000->3000/tcp   evcp-booking-api
+f7d1ca11f6db   postgres:16-alpine                             "docker-entrypoint.s…"   8 days ago          Up About an hour (healthy)   0.0.0.0:5432->5432/tcp,[::]:5432->5432/tcp   evcp-postgres
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   8 days ago          Up About an hour (healthy)   0.0.0.0:6379->6379/tcp,[::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago        Up About an hour             0.0.0.0:8000->8000/tcp,[::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-19>

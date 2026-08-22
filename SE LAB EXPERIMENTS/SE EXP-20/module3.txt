@@ -1,0 +1,4 @@
+MODULE 3: TESTING
+
+This module performs functional testing, integration testing,
+and validation to ensure the project works correctly.

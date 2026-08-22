@@ -1,0 +1,4 @@
+MODULE 2: DATA PROCESSING
+
+This module handles data collection, processing, validation,
+and preparation of project data for further analysis.

@@ -1,0 +1,116 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>cd
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8043-BA5D
+
+ Directory of C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21
+
+08/17/2026  10:51 AM    <DIR>          .
+08/17/2026  10:48 AM    <DIR>          ..
+08/17/2026  10:50 AM               781 app.py
+08/17/2026  10:51 AM               178 Dockerfile
+08/17/2026  10:50 AM                 5 requirements.txt
+               3 File(s)            964 bytes
+               2 Dir(s)  12,002,791,424 bytes free
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>docker build -t exp21-flask-todo .
+[+] Building 21.6s (11/11) FINISHED                                                                docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.1s
+ => => transferring dockerfile: 217B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/python:3.11-slim                                                3.7s
+ => [auth] library/python:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load .dockerignore                                                                                  0.1s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/5] FROM docker.io/library/python:3.11-slim@sha256:9c900dea9e8fb7e16277c179b555cc72d29a352dbc33cff48ad5a041  5.4s
+ => => resolve docker.io/library/python:3.11-slim@sha256:9c900dea9e8fb7e16277c179b555cc72d29a352dbc33cff48ad5a041  0.1s
+ => => sha256:daff6f8ae2ef893f1b47c500d35ae0ba6f0c1bb82a4bf0f084f84a4a363644c3 14.45MB / 14.45MB                   2.3s
+ => => sha256:605d2cb1fe61c64de721db128eab03d7fdb885947126722e2d98a49b18147fe2 249B / 249B                         0.7s
+ => => sha256:7ce8f1a1db8f7a913c17b3b6aa717c65c735bb723a8b6c3958e3a122a971869f 1.29MB / 1.29MB                     1.2s
+ => => extracting sha256:7ce8f1a1db8f7a913c17b3b6aa717c65c735bb723a8b6c3958e3a122a971869f                          0.8s
+ => => extracting sha256:daff6f8ae2ef893f1b47c500d35ae0ba6f0c1bb82a4bf0f084f84a4a363644c3                          2.8s
+ => => extracting sha256:605d2cb1fe61c64de721db128eab03d7fdb885947126722e2d98a49b18147fe2                          0.1s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 866B                                                                                  0.0s
+ => [2/5] WORKDIR /app                                                                                             0.3s
+ => [3/5] COPY requirements.txt .                                                                                  0.1s
+ => [4/5] RUN pip install --no-cache-dir -r requirements.txt                                                       8.0s
+ => [5/5] COPY app.py .                                                                                            0.1s
+ => exporting to image                                                                                             3.4s
+ => => exporting layers                                                                                            1.7s
+ => => exporting manifest sha256:0a546c896e45387887c4ee7db5bae9d9d812dce3fbfc69ab4f9047e078e2cf61                  0.0s
+ => => exporting config sha256:69b3811ce9facf801fa70e3b079625fbaa95844bb1ab956cb25d4a83845f4f29                    0.0s
+ => => exporting attestation manifest sha256:0df89363b68e5e2b762a5db76b4887fbe68034ea9a1238e397d267f584283379      0.1s
+ => => exporting manifest list sha256:158d6a40b7d820cf6f54c596cc80e5a7fd3f551dd0f45400c9a09770759a9a03             0.0s
+ => => naming to docker.io/library/exp21-flask-todo:latest                                                         0.0s
+ => => unpacking to docker.io/library/exp21-flask-todo:latest                                                      1.4s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/8w21waq5pqyyzvel60i0dop19
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>docker images
+                                                                                                                                            i Info →   U  In Use
+IMAGE                                                                                            ID             DISK USAGE   CONTENT SIZE   EXTRA
+curlimages/curl:latest@sha256:7c12af72ceb38b7432ab85e1a265cff6ae58e06f95539d539b654f2cfa64bb13   7c12af72ceb3       10.7MB         10.7MB
+docker/desktop-cloud-provider-kind:v0.5.0                                                        4ad59ce20658        595MB          162MB    U
+docker/desktop-containerd-registry-mirror:v0.0.3                                                 179a9ea3ae47       50.3MB         16.1MB    U
+envoyproxy/envoy:v1.36.4                                                                         08acc53db6f4        248MB         62.1MB
+evcp/booking-service:1.0.0                                                                       0bb2f4525a1c        210MB         50.5MB
+exp19-cicd-demo:latest                                                                           8b85531caf59       92.7MB         26.1MB    U
+exp21-flask-todo:latest                                                                          158d6a40b7d8        211MB         51.2MB
+face_swap_project_for_colleague-face-swapper:latest                                              3d6f61ee0f46       4.35GB         1.42GB    U
+flask-kubernetes-api:latest                                                                      c06ae81df628        211MB         51.2MB
+jenkins-cicd-demo:latest                                                                         3b720741ca02       92.7MB         26.1MB    U
+jenkins/jenkins:lts-jdk21                                                                        8547df3b0db2        801MB          290MB    U
+kindest/node:v1.34.3                                                                             08497ee19eac       1.35GB          395MB    U
+postgres:16-alpine                                                                               57c72fd2a128        420MB          117MB    U
+python:latest                                                                                    5f1cdbcab9a5       1.63GB          433MB    U
+rakshithrr/exp19-cicd-demo:latest                                                                3dd48d186e73       92.7MB         26.1MB    U
+rakshithrr/flask-kubernetes-api:latest                                                           c06ae81df628        211MB         51.2MB
+redis:7-alpine                                                                                   e7723ff73d96       57.8MB         16.8MB    U
+static-website:latest                                                                            9d0800dc9ace       92.7MB         26.1MB    U
+ubuntu:latest                                                                                    3131b4cc82a7        161MB         45.3MB    U
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>docker run -d --name exp21-flask-todo-container -p 5000:5000 exp21-flask-todo
+8ffc4cb2c63a978ad5733995074431b2e9165e35aa06c18a6fe97263249827d0
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>docker ps
+CONTAINER ID   IMAGE                                          COMMAND                  CREATED             STATUS                 PORTS                NAMES
+8ffc4cb2c63a   exp21-flask-todo                               "python app.py"          7 seconds ago       Up 6 seconds           0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   exp21-flask-todo-container
+9bf4c54232da   rakshithrr/exp19-cicd-demo:latest              "/docker-entrypoint.…"   About an hour ago   Up About an hour       0.0.0.0:8085->80/tcp, [::]:8085->80/tcp       exp19-github-deployed
+46a838ed7363   exp19-cicd-demo                                "/docker-entrypoint.…"   2 hours ago         Up 2 hours             0.0.0.0:8084->80/tcp, [::]:8084->80/tcp       exp19-cicd-demo-container
+f84b90de061e   21f880caeddb                                   "docker-entrypoint.s…"   8 days ago          Up 2 hours (healthy)   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   evcp-booking-api
+f7d1ca11f6db   postgres:16-alpine                             "docker-entrypoint.s…"   8 days ago          Up 2 hours (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp   evcp-postgres
+8c4357cda090   redis:7-alpine                                 "docker-entrypoint.s…"   8 days ago          Up 2 hours (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   evcp-redis
+4821ca929678   face_swap_project_for_colleague-face-swapper   "uvicorn server:app …"   3 months ago        Up 2 hours             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   face_swap_project_for_colleague-face-swapper-1
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>docker login
+Authenticating with existing credentials... [Username: rakshithrr]
+
+i Info → To login with a different account, run 'docker logout' followed by 'docker login'
+
+
+Login Succeeded
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>docker tag exp21-flask-todo:latest YOUR_DOCKERHUB_USERNAME/exp21-flask-todo:latest
+error parsing reference: "YOUR_DOCKERHUB_USERNAME/exp21-flask-todo:latest" is not a valid repository/tag: repository name must be lowercase
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>docker tag exp21-flask-todo:latest rakshithrr/exp21-flask-todo:latest
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>docker push rakshithrr/exp21-flask-todo:latest
+The push refers to repository [docker.io/rakshithrr/exp21-flask-todo]
+d174cbf5ba60: Pushed
+26c307b5e35a: Mounted from rakshithrr/flask-kubernetes-api
+7ce8f1a1db8f: Pushed
+bab4f92576ae: Pushed
+daff6f8ae2ef: Pushed
+605d2cb1fe61: Pushed
+93c6322c8627: Pushed
+f8e07cda00fb: Pushed
+ce05b6367e9e: Pushed
+latest: digest: sha256:158d6a40b7d820cf6f54c596cc80e5a7fd3f551dd0f45400c9a09770759a9a03 size: 856
+
+C:\Users\RAKSHITH.R.R\Downloads\SLOT-D SOFTWARE ENGINERING\SE LAB EXPERIMENTS\SE EXP-21>
